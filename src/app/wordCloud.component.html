@@ -1,0 +1,11 @@
+<div class='page'>
+    <h1 class='page-title'>{{ title }}</h1>
+    <p class='page_content'>{{ message }}</p>
+    <div>
+        <ul>
+            <li *ngFor="let mood of moods">
+                {{mood.list | json}}
+            </li>
+        </ul>
+    </div>
+</div>
