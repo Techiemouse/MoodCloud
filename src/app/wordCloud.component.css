@@ -1,5 +1,13 @@
-h1 {
-    color: #369;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 250%;
+.cloud-body {
+  background-color: #edffef;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }

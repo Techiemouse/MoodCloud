@@ -3,9 +3,10 @@ import {WordCloudService} from './wordCloud.service';
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-    selector:    'app-mood-list',
+    selector:    'app-mood-cloud',
     templateUrl: 'wordCloud.component.html',
-    providers:  [ WordCloudService ]
+    providers:  [ WordCloudService ],
+    styleUrls: ['./wordCloud.component.css']
 })
 export class WordCloudComponent implements OnInit {
     moods: Mood[];

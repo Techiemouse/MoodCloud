@@ -1,9 +1,20 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<head>
+  <title> MoodCloud | Customise and download beautiful word clouds depending on Mood</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
+<div class="app-title">
   <h1>
     {{ title }}
   </h1>
 </div>
-<app-mood-list></app-mood-list>
 
+<div class="app-body">
+  <div class="customisation">
+    <div class="palette-select">Select Colours</div>
+    <div class="font-select">Select Font</div>
+    <div class="word-input">Add new word</div>
+  </div>
+
+  <app-mood-cloud></app-mood-cloud>
+</div>
 
