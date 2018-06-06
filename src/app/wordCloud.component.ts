@@ -1,27 +1,15 @@
 import {Mood} from './mood';
-import {WordCloudService} from './wordCloud.service';
-import {Component, OnInit} from '@angular/core';
+import {Component, OnChanges, Input, OnInit, ChangeDetectionStrategy} from '@angular/core';
 
 @Component({
     selector:    'app-mood-cloud',
     templateUrl: 'wordCloud.component.html',
-    providers:  [ WordCloudService ],
     styleUrls: ['./wordCloud.component.css']
 })
-export class WordCloudComponent implements OnInit {
-    moods: Mood[];
+export class WordCloudComponent implements OnChanges {
+    @Input() moodList: Mood[];
 
-
-    constructor(private service: WordCloudService) {
-
+    ngOnChanges() {
+      console.log('+++++++', this.moodList);
     }
-    getMoods(): void {
-        this.service.getList((list) => {
-            this.moods = list;
-        });
-    }
-    ngOnInit() {
-        this.getMoods();
-    }
-
 }

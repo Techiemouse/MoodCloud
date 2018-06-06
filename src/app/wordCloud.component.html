@@ -1,7 +1,7 @@
 <div class="cloud-body">
     <ul>
-        <li *ngFor="let mood of moods">
-          <div [hidden]="mood.mood === 'negative'" >
+        <li *ngFor="let mood of moodList">
+          <div *ngIf="mood.mood === 'positive'">
             <div *ngFor="let word of mood.list">
               <p>{{word}}</p>
             </div>

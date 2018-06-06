@@ -11,10 +11,15 @@
 <div class="app-body">
   <div class="customisation">
     <div class="palette-select">Select Colours</div>
-    <div class="font-select">Select Font</div>
+    <div class="font-select">
+      <select #selectFont (change)="setFontFamily(selectFont.value)">
+        <option *ngFor="let font of fonts" [value]="font.family">
+          {{font.family}}
+        </option>
+      </select>
+    </div>
     <div class="word-input">Add new word</div>
   </div>
-
-  <app-mood-cloud></app-mood-cloud>
+  <app-mood-cloud [moodList]="moods"></app-mood-cloud>
 </div>
 

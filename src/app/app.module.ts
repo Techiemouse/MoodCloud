@@ -16,6 +16,6 @@ import { AppComponent } from './app.component';
     HttpClientModule
   ],
   providers: [WordCloudService],
-  bootstrap: [AppComponent, WordCloudComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
