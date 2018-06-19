@@ -10,7 +10,10 @@
 
 <div class="app-body">
   <div class="customisation">
-    <div class="palette-select">Select Colours</div>
+    <div class="palette-select">
+      Select Colours
+
+    </div>
     <div class="font-select">
       <select #selectFont (change)="setFontFamily(selectFont.value)">
         <option *ngFor="let font of fonts" [value]="font.family">
